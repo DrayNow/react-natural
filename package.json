@@ -1,0 +1,45 @@
+{
+  "name": "react-natural",
+  "private": true,
+  "description": "An extendable natural language processing component for React",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/draynow/react-natural"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "build-storybook": "build-storybook",
+    "bump-changelog": "./bump-changelog",
+    "deploy-storybook": "storybook-to-ghpages",
+    "prebuild": "npm test && rm -rf lib/",
+    "prepublish": "npm run build",
+    "storybook": "start-storybook -p 6006",
+    "test": "jest src",
+    "version": "npm run build && npm run bump-changelog && git add -A lib CHANGELOG.md"
+  },
+  "author": "Neil Gabbadon <neil.gabbadon@gmail.com> (https://github.com/newoga)",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "16"
+  },
+  "keywords": [
+    "react",
+    "nlp"
+  ],
+  "devDependencies": {
+    "@babel/core": "7.5.4",
+    "@babel/preset-env": "7.5.4",
+    "@storybook/addon-actions": "5.1.9",
+    "@storybook/addon-links": "5.1.9",
+    "@storybook/addons": "5.1.9",
+    "@storybook/react": "5.1.9",
+    "@storybook/storybook-deployer": "2.8.1",
+    "babel-jest": "24.8.0",
+    "babel-loader": "8.0.6",
+    "jest": "24.8.0",
+    "prettier": "1.18.2",
+    "react": "16.8.6"
+  },
+  "dependencies": {}
+}
