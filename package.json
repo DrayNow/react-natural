@@ -1,5 +1,5 @@
 {
-  "name": "react-natural",
+  "name": "@draynow/react-natural",
   "private": true,
   "description": "An extendable natural language processing component for React",
   "repository": {
