@@ -1,0 +1,1 @@
+{"version":3,"file":"main.00144be7b334ec8d8458.bundle.js","sources":["webpack:///./src/Natural.js"],"sourcesContent":["import React, { createElement } from \"react\";\n\nexport default function Natural({ processor, onChange, children }) {\n  return children(text => onChange(processor(text), text));\n}\n"],"mappings":"AAAA","sourceRoot":""}
