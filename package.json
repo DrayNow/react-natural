@@ -8,11 +8,11 @@
   },
   "main": "lib/index.js",
   "scripts": {
-    "build": "babel src --out-dir lib",
+    "build": "babel src --out-dir lib --ignore \"src/**/*.spec.js\",\"src/**/*.stories.js\"",
     "build-storybook": "build-storybook",
     "bump-changelog": "./bump-changelog",
     "deploy-storybook": "storybook-to-ghpages",
-    "prebuild": "npm test && rm -rf lib/",
+    "prebuild": "npm test && rimraf lib/",
     "prepublish": "npm run build",
     "storybook": "start-storybook -p 6006",
     "test": "jest src",
@@ -28,6 +28,7 @@
     "nlp"
   ],
   "devDependencies": {
+    "@babel/cli": "7.5.0",
     "@babel/core": "7.5.4",
     "@babel/preset-env": "7.5.4",
     "@storybook/addon-actions": "5.1.9",
@@ -40,7 +41,8 @@
     "babel-loader": "8.0.6",
     "jest": "24.8.0",
     "prettier": "1.18.2",
-    "react": "16.8.6"
+    "react": "16.8.6",
+    "rimraf": "2.6.3"
   },
   "dependencies": {}
 }
